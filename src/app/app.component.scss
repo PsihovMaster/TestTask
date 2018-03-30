@@ -1,0 +1,47 @@
+    .input{
+        background: black;
+        border-color: aqua;
+        color: blue;
+        font-size: 9pt;
+        text-align: center;
+    }
+    .inp{
+        text-align: center;
+        padding-top: 15%;
+    }
+    .btn{
+        margin-top: 5px;
+    }
+
+    .inp{
+        overflow: hidden;
+        height:25em; width:auto;
+        background-color: black;
+      }
+
+      .fontc{
+        color: aqua;
+        font-size: 9pt;
+      }
+
+    input.ng-invalid {
+        background-color:pink;
+    }
+    input.ng-valid {
+        background-color:lightgreen;
+    }
+
+    input {
+        width: 220px;height:24px;
+        border: 1px solid #3255cc;
+        border-right: 10px solid #3255cc;
+    }
+    
+    .ng-dirty.ng-invalid {
+        border-color: red !important;
+    }
+    
+    span {
+        color: red;
+        font-size: 15px;
+    }
