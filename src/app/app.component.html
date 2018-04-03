@@ -6,7 +6,7 @@
 <div class="form-group row">
   <div class="col-sm-5"></div>
   <input class="form-control col-sm-2 b2" [(ngModel)]="name" name="text" #textInput="ngModel"
-  required minlength="4" maxlength="8"/>
+  required minlength="4" maxlength="8" (keyup.enter)="testService.navToPage(name)" />
   <div [hidden] = "textInput.valid" class="col-sm-2" style="color:rgb(224, 56, 56)">
     замало буковок</div>
   </div>
