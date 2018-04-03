@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { Test01Component } from './test/test01/test01.component';
 import { Test02Component } from './test/test02/test02.component';
 import { Test03Component } from './test/test03/test03.component';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { RouterModule, } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavService } from './services/test.service';
 import { NewtestComponent } from './newtest/newtest.component';
 import { New1Component } from './newtest/new1/new1.component';
@@ -35,6 +35,7 @@ import { ErrComponent } from './newtest/err/err.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     RouterModule
   ],

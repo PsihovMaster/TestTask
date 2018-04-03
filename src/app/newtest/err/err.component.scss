@@ -1,9 +1,5 @@
 .m-a{
     box-sizing: border-box;
-        transform: translate(-50%, -50%);
-        position: absolute; 
-        top: 10%; 
-        left: 50%;
         background: black;
         padding: 10px;
     }
@@ -12,7 +8,8 @@
         background: black;
         border-color: aqua;
         color: aqua;
-        font-size: 9pt;
+        font-size: 12pt;
+        margin-top: 50px;
 }
 p{
     color: bisque;
