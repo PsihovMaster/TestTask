@@ -76,6 +76,9 @@
     },
     "service": {
       "spec": false
+    },
+    "build": {
+      "showCircularDependencies": false
     }
   }
 }

@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   name = '';
   text = '';
-  constructor(public testService: NavService) {}
+  constructor(public testService: NavService) { }
 
 
   ngOnInit() {

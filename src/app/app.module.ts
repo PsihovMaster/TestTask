@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { New3Component } from './newtest/new3/new3.component';
 import { New4Component } from './newtest/new4/new4.component';
 import { New5Component } from './newtest/new5/new5.component';
 import { ErrComponent } from './newtest/err/err.component';
+import { AddNameComponent } from './newtest/add-name/add-name.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,16 @@ import { ErrComponent } from './newtest/err/err.component';
     New3Component,
     New4Component,
     New5Component,
-    ErrComponent
+    ErrComponent,
+    AddNameComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpModule
   ],
   providers: [
     NavService

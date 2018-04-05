@@ -1,11 +1,41 @@
 <div class="row">
-    <div class="col-sm-5"></div>
-    <div class="col-sm-2" style="text-align:center;">
-    <button class="b1" routerLink="/new2">&#8656;</button>
-    <button class="b1" routerLink="/new4">&#8658;</button>
-    <br><br><p class="b1">Сторінка №3</p>
-  
-  </div>
+  <div class="col-sm-5"></div>
+  <div class="col-sm-2" style="text-align:center;">
+      &nbsp;&nbsp;&nbsp;<button class="b1 btn btn-default" routerLink="/new2">&#8656;</button>
+    <button class="b1 btn btn-default" routerLink="/new4">&#8658;</button>
+    <p class="b1">Сторінка №3</p>
     <div class="col-sm-5"></div>
   </div>
-  
+</div>
+    <div class="row">
+      <input class="b1 form-control col-sm-2" [(ngModel)]="first" placeholder="Name" />
+      <input class="b1 form-control col-sm-2" [(ngModel)]="second" placeholder="Surname" />
+      <button *ngIf="!isEdit" class="btn btn-default b1 col-sm-1" (click)="add()">ADD</button>
+      <button *ngIf="isEdit" class="btn btn-default b1 col-sm-1" (click)="update(isNowEdited);isEdit=false">EDIT</button>
+      <div class="col-sm-6"></div>
+    </div>
+    <div *ngFor="let user of testService.users; let i = index" [attr.index]="i">
+      <button class="btn btn-default b1" (click)="getUserForUpdate(user.id); isEdit=true">UPD</button>
+      <button class="btn btn-default b1" (click)="delete(i)">DEL</button>
+      {{user.id}}. {{user.name}} {{user.surname}}
+    </div>
+
+
+<!-- <app-add-name (onAddUser)="updateUserList($event)"></app-add-name> -->
+
+
+<!-- <div ng-app="countryApp">
+  <div ng-controller="CountryCtrl">
+  <table class="table table-striped">
+    <tr>
+     <th>Код</th>
+     <th>Страна</th>
+     <th>Население</th>
+    </tr>
+    <tr ng-repeat="country in countries | orderBy: 'code' ">
+     <td>{{country.code}}</td>
+     <td>{{country.name}}</td>
+     <td>{{country.population}}</td>
+    </tr>
+   </table>
+  </div></div> -->

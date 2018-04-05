@@ -52,6 +52,7 @@
     border-color: aqua;
     color: aqua;
     font-size: 12pt;
+    margin: 5px;
 }
 input.ng-invalid {
     background-color:pink;
@@ -64,4 +65,10 @@ input.ng-valid {
 input.ng-untouched {
     background-color:rgb(0, 0, 0);
     color: rgb(18, 96, 212);
+}
+.t-a-r{
+    text-align: right;
+}
+.t-a-l{
+    text-align: left;
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { routes } from '../app-routing.module';
 import { ErrComponent } from '../newtest/err/err.component';
-
+import { User } from '../models/user.model';
 // @Injectable()
 // export class NavService {
 
@@ -20,7 +20,7 @@ import { ErrComponent } from '../newtest/err/err.component';
 
 @Injectable()
 export class NavService {
-
+    users: User[] = [];
     constructor(private router: Router) { }
 
     public navToPage(name: string) {

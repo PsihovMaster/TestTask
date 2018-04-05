@@ -1,23 +1,15 @@
-
 <form ngForm="simpleForm" novalidate class="body">
-<div class="text-center">
-  <h1>testtask</h1>
-</div>
-<div class="form-group row">
-  <div class="col-sm-5"></div>
-  <input class="form-control col-sm-2 b2" [(ngModel)]="name" name="text" #textInput="ngModel"
-  required minlength="4" maxlength="8" (keyup.enter)="testService.navToPage(name)" />
-  <div [hidden] = "textInput.valid" class="col-sm-2" style="color:rgb(224, 56, 56)">
-    замало буковок</div>
+  <div class="text-center">
+    <h1>testtask</h1>
   </div>
-  <div class="col-sm-3"></div>
-<div class="row">
-    <div class="col-sm-5"></div>
-    <button class="btn col-sm-2 b2" (click)="testService.navToPage(name)" [disabled]="textInput.invalid">GO</button>
-  <div [hidden] = "textInput.valid" class="col-sm-2" style="color:rgb(224, 207, 56)">
-    кнопочка заблокована
-  </div>
-  </div><div class="row col-sm-3">
-</div>
+  <div class="form-group row">
+    <div class="col-sm-4"></div>
+    <input class="form-control col-sm-2 b2" [(ngModel)]="name" name="text" #textInput="ngModel" required minlength="4" maxlength="8"
+      (keyup.enter)="testService.navToPage(name)" />
+      <button class="btn col-sm-1 b2" (click)="testService.navToPage(name)" [disabled]="textInput.invalid">GO</button>
+      <div [hidden]="textInput.valid" class="col-sm-2 t-a-l">
+        <span style="color:rgb(224, 207, 56)">кнопочка заблокована</span>
+        <span style="color:rgb(224, 56, 56)">замало буковок</span>
+        </div>
+    </div>
   <router-outlet></router-outlet>
-
